@@ -23,18 +23,19 @@
     </nav>
     <div class="container-fluid main-div">
         <form class="form-inline">
-            <div class="mb-3">
+            <div class="mb-3 form-item">
                 <label for="day" class="form-label">Day</label>
                 <input type="number" class="form-control" id="day" aria-describedby="day of birth">
             </div>
-            <div class="mb-3">
+            <div class="mb-3 form-item">
                 <label for="month" class="form-label">Month</label>
-                <input type="number" class="form-control" id="day" aria-describedby="month of birth">
+                <input type="number" class="form-control" id="month" aria-describedby="month of birth">
             </div>
-            <div class="mb-3">
+            <div class="mb-3 form-item">
                 <label for="day" class="form-label">Year</label>
-                <input type="number" class="form-control" id="day" aria-describedby="year of birth">
+                <input type="number" class="form-control" id="year" aria-describedby="year of birth">
             </div>
+            <button type="button" class="btn btn-primary" onclick="dayOfTheWeek()">Primary</button>
         </form>
     </div>
 
