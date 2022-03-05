@@ -11,28 +11,30 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Josefin+Sans:wght@100&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <nav class="navbar navbar-light bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="assets/icon.jpg" alt="icon" class="icon">
-            </a>
-        </div>
-    </nav>
+    
+        <h2 class="first-header">THE AKAN NAME GENERATOR</h2>
+  
     <div class="container-fluid main-div">
         <!--Short description about the application-->
         <div class="container intro">
-            <h2>THE AKAN NAME GENERATOR</h2>
-            <p>Akan names are derived from Ghanian culture.</p> 
-            <p>Frequently in Ghana, children are given their first name as
-                a 'day name' which corresponds to the day in the week they 
-                were born.This is also based on gender.</p>
-            <p>All we need is you date of birth, let's have some fun &#128541;</p>
+            <p>Akan names are derived from Ghanian culture.</p>
+            <p>Frequently in Ghana, children are given their first name based on their gender as
+                well as a 'day name' which corresponds to the day in the week they
+                were born.</p>
+            <p>All we need is you date of birth, let's have some fun &#128541;.</p>
         </div>
 
-        <!--Ask about name and Gender-->
+        <!--Ask about name and Gender
         <div>
             <form class="">
                 <div class="row mb-3 form-item">
@@ -41,47 +43,47 @@
                     <button type="button" class="btn btn-primary form-item">Submit</button>
                 </div>
             </form>
-        </div>
-        <!--Day of the weekCalculator
-        <div class="container" id="akan-form">
-            <form class="form-inline">
-                <div class="mb-3 form-item">
-                    <label for="day" class="form-label">Day</label>
-                    <input type="number" class="form-control" id="day" aria-describedby="day of birth">
+        </div>-->
+        <!--Day of the weekCalculator-->
+        <div class="container">
+            <form id="akan-form" class="akan-form" >
+                <div class="mb-3 form-item row">
+                    <label for="day" class="col-form-label col-sm-4">Day</label>
+                    <input type="number" class="form-control col-sm-8" id="day" aria-describedby="day of birth">
                 </div>
-                <div class="mb-3 form-item">
-                    <label for="month" class="form-label">Month</label>
-                    <input type="number" class="form-control" id="month" aria-describedby="month of birth">
+                <div class="mb-3 form-item row">
+                    <label for="month" class="col-form-label col-sm-4">Month</label>
+                    <input type="number" class="form-control col-sm-8" id="month" aria-describedby="month of birth">
                 </div>
-                <div class="mb-3 form-item">
-                    <label for="year" class="form-label">Year</label>
-                    <input type="number" class="form-control" id="year" aria-describedby="year of birth">
+                <div class="mb-3 form-item row">
+                    <label for="year" class="col-form-label col-sm-4">Year</label>
+                    <input type="number" class="form-control col-sm-8" id="year" aria-describedby="year of birth">
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="male" value="option1">
                     <label class="form-check-label" for="male">Male</label>
-                  </div>
-                  <div class="form-check form-check-inline">
+                </div>
+                <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="female" value="option2">
                     <label class="form-check-label" for="female">Female</label>
-                  </div>
-                <button type="button" class="btn btn-primary" onclick="dayOfTheWeek()">Submit</button>
+                </div> <br><br>
+                <button type="button" class="btn btn-primary mx-auto" onclick="dayOfTheWeek()">Submit</button>
             </form>
         </div>
-    </div>-->
+    </div>
 
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="scripts.js"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

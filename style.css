@@ -1,0 +1,41 @@
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    font-size: large;
+}
+
+p{
+    padding: 0 20vw;
+}
+
+/*Navbar styling*/
+.icon{
+    height:15vh;
+    width: 12vw;
+}
+
+/*Intro styling*/
+.intro{
+    text-align: center;
+    margin-top: 5vh;
+}
+
+.first-header{
+    font-family: 'Dancing Script', cursive;
+    font-weight: bolder;
+    font-size: 3em;
+    color: white;
+    text-align: center !important;
+    background-color: #595260;
+    padding: 20px;
+}
+
+/* Form styling */
+
+.akan-form{
+    padding: 0 30vw;
+}
+
+.btn-primary{
+    width: 20vw;
+}
