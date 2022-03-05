@@ -1,10 +1,25 @@
+//Functions to validate data
+function validateDay(){
+    let day = document.getElementById('day').value
+    let error;
+
+    if (isNaN(day) || day<=0 || day>31){
+        error = "Day can only be from 1 to 31"
+        document.getElementById('day-error').innerHTML = error
+    }
+}
+
+//let month = document.getElementById('month').value
+//let yr = document.getElementById('year').value
+
+
 //Function to get the day of the week from dates
 function dayOfTheWeek(){
-
     var DD = document.getElementById('day').value
     var MM = document.getElementById('month').value
     var year = document.getElementById('year').value
 
+    
     var CC = parseInt(year.substring(0,2)) //Extract 19 from 1976 i.e century digits
     var YY = parseInt(year.substring(2,4)) //Extract 76 from 1976 i.e year digits
 

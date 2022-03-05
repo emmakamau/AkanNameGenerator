@@ -68,6 +68,11 @@ h3{
 
 /* Display section name */
 
+.error{
+    color: #11999E;
+    padding: 2px 8px;
+}
+
 #display-name{
     font-family:'Dancing Script', cursive;
     text-align: center;
@@ -81,7 +86,7 @@ h3{
 @keyframes text-lineUp {
     0% {
         opacity: 0;
-        transform: translateY(60%);
+        transform: translateY(80%);
     }
     20% {
         opacity: 0;
