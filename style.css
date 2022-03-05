@@ -18,6 +18,9 @@ h3{
     background-color: #11999E;
     color: white;
     font-weight: bolder;
+    width: 20vw;
+    padding: 0 4px;
+    margin: 16px 0;
 }
 
 .btn:hover{
@@ -34,7 +37,7 @@ h3{
 /*Intro styling*/
 .intro{
     text-align: center;
-    margin-top: 2vh;
+    margin-top: 1vh;
 }
 
 .first-header{
@@ -44,7 +47,7 @@ h3{
     color: white;
     text-align: center !important;
     background-color: #11999E;
-    padding: 15px;
+    padding: 5px;
 }
 
 /* Form styling */
@@ -58,10 +61,6 @@ h3{
     padding: 2vw 4vw;
 }
 
-.btn-primary{
-    width: 20vw;
-}
-
 .form-control{
     font-weight: bold;
 }
@@ -73,30 +72,14 @@ h3{
     text-align: left;
 }
 
+.display{
+    margin-top: -16px;
+}
+
 #display-name{
     font-family:'Dancing Script', cursive;
     text-align: center;
     color: #11999E;
-    padding:32px;
     font-size: 4em !important;
-    animation: 4s text-lineUp ease-in-out infinite;
-    animation-delay: 4s;
 }
 
-@keyframes text-lineUp {
-    0% {
-        opacity: 0;
-        transform: translateY(80%);
-    }
-    20% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-        transform: translateY(0%);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0%);
-    }
-}

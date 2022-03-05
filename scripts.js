@@ -26,6 +26,9 @@ function validateYear(){
     if(year.length > 4){
         yearError = "Invalid input!"
         document.getElementById('year-error').innerHTML = yearError
+    }else if(year === 0){
+        yearError = "Year cannot be empty"
+        document.getElementById('year-error').innerHTML = yearError
     }
 };
 
@@ -38,15 +41,28 @@ function dayOfTheWeek(){
     validateYear()
     validateDay()
     validateMonth()
-    var DD = document.getElementById('day').value
-    var MM = document.getElementById('month').value
+    var DD = parseInt(document.getElementById('day').value)
+    var MM = parseInt(document.getElementById('month').value)
     var year = document.getElementById('year').value
 
     
     var CC = parseInt(year.substring(0,2)) //Extract 19 from 1976 i.e century digits
     var YY = parseInt(year.substring(2,4)) //Extract 76 from 1976 i.e year digits
+    
+    console.log(typeof DD, DD)
+    console.log(typeof MM, MM)
+    console.log(typeof CC, CC)
+    console.log(typeof YY, YY)
+    console.log(DD,MM,CC,YY)
 
     var weekDay = parseInt(( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7)
+    /*var a = (CC/4) - 2*CC-1
+    var b = parseInt(a) + (5*YY/4)
+    var c = parseInt(b) + (26*(MM+1)/10)
+    var d = parseInt(c) + DD
+
+    var weekDay = d%7*/
+    console.log(weekDay)
 
     if (weekDay === 0){
         day = "Sunday"
@@ -70,7 +86,7 @@ function dayOfTheWeek(){
         day = "Saturday"
         return day;
     }else {
-        day = "What the hell just happened!!!"
+        day = "We are out of days of the week!!!"
         return day;
     }
 }
@@ -117,83 +133,62 @@ function akanName(){
         var userName = maleNameList[0]
         response = `Your Akan name is ${userName}!! &#128512;`
         document.getElementById('display-name').innerHTML = response
-        console.log(userName)
     }else if(gender==='male' && weekDay==='Monday'){
         var userName = maleNameList[1]
         response = `Your Akan name is ${userName}!! &#128512;`
         document.getElementById('display-name').innerHTML = response
-        console.log(userName)
     }else if(gender==='male' && weekDay==='Tuesday'){
         var userName = maleNameList[2]
         response = `Your Akan name is ${userName}!! &#128512;`
         document.getElementById('display-name').innerHTML = response
-        console.log(userName)
     }else if(gender==='male' && weekDay==='Wednesday'){
         var userName = maleNameList[3]
         response = `Your Akan name is ${userName}!! &#128512;`
         document.getElementById('display-name').innerHTML = response
-        console.log(userName)
     }else if(gender==='male' && weekDay==='Thursday'){
         var userName = maleNameList[4]
         response = `Your Akan name is ${userName}!! &#128512;`
         document.getElementById('display-name').innerHTML = response
-        console.log(userName)
     }else if(gender==='male' && weekDay==='Friday'){
         var userName = maleNameList[5] 
         response = `Your Akan name is ${userName}!! &#128512;`
         document.getElementById('display-name').innerHTML = response
-        console.log(userName)
     }else if(gender==='male' && weekDay==='Saturday'){
         var userName = maleNameList[6]
         response = `Your Akan name is ${userName}!! &#128512;`
         document.getElementById('display-name').innerHTML = response
-        console.log(userName)
     }else if(gender==='female' && weekDay==='Sunday'){
         var userName = femaleNameList[0]
         response = `Your Akan name is ${userName}!!&#128512;`
         document.getElementById('display-name').innerHTML = response
-        console.log(userName)
     }else if(gender==='female' && weekDay==='Monday'){
         var userName = femaleNameList[1]
         response = `Your Akan name is ${userName}!! &#128512;`
         document.getElementById('display-name').innerHTML = response
-        console.log(userName)
     }else if(gender==='female' && weekDay==='Tuesday'){
         var userName = femaleNameList[2]
         response = `Your Akan name is ${userName}!! &#128512;`
         document.getElementById('display-name').innerHTML = response
-        console.log(userName)
     }else if(gender==='female' && weekDay==='Wednesday'){
         var userName = femaleNameList[3]
         response = `Your Akan name is ${userName}!! &#128512;`
         document.getElementById('display-name').innerHTML = response
-        console.log(userName)
     }else if(gender==='female' && weekDay==='Thursday'){
         var userName = femaleNameList[4]
         response = `Your Akan name is ${userName}!! &#128512;`
         document.getElementById('display-name').innerHTML = response
-        console.log(userName)
     }else if(gender==='female' && weekDay==='Friday'){
         var userName = femaleNameList[5]
         response = `Your Akan name is ${userName}!! &#128512;`
         document.getElementById('display-name').innerHTML = response
-        console.log(userName)
     }else if(gender==='female' && weekDay==='Saturday'){
         var userName = femaleNameList[6]
         response = `Your Akan name is ${userName}!! &#128512;`
         document.getElementById('display-name').innerHTML = response
-        console.log(userName)
     }else{
         var userName = alert('Data entered is invalid, please try again.')
+        hideForm.style.display = "block";
     }
     console.log(gender, weekDay)
 }
 
-function reload(){
-    var reloadMe = document.getElementById('reload-btn');
-    if (reloadMe.style.display === "block"){
-        reloadMe.style.display = "none"
-    }else{
-        reloadMe.style.display = "block"
-    }
-}

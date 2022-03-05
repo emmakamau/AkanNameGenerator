@@ -36,11 +36,11 @@
 
         <!--Input form-->
         <div class="container form-center">
-            <form id="akan-form" class="akan-form">
+            <form id="akan-form" class="akan-form" name="akan-form">
                 <h3>Enter data here.</h3>
                 <div class="mb-3 form-item row">
                     <label for="day" class="col-form-label col-sm-4">Day</label>
-                    <input type="number" onkeyup="validateDay()" maxlength="2" class="form-control col-sm-8" id="day" aria-describedby="day of birth" placeholder="12">
+                    <input type="number" onkeyup="validateDay()" maxlength="2" name="day" class="form-control col-sm-8" id="day" aria-describedby="day of birth" placeholder="12">
                     <span id="day-error" class="error" role=""></span>
                 </div>
                 <div class="mb-3 form-item row">
@@ -63,11 +63,11 @@
                             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="female" value="female">
                             <label class="form-check-label" for="female">Female</label>
                         </div>
-                    </div><br><br>
+                    </div><br>
                 </div>
                 <div class="d-flex">
                     <div class="align-self-center mx-auto">
-                        <button type="button" class="btn btn-primary" onclick="akanName()">Submit</button>
+                        <button type="button" class="btn btn-primary" onclick="akanName()">Search</button>
                     </div>
                 </div>
             </form>
@@ -76,6 +76,11 @@
         <!--Display akan name -->
         <div class="container display">
             <h1 id="display-name"></h1>
+            <div class="d-flex">
+                <div class="align-self-center mx-auto">
+                    <a href="index.html" class="btn btn-primary">Reload</a>
+                </div>
+            </div>
         </div>
     </div>
 
