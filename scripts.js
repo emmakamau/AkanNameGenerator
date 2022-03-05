@@ -70,45 +70,73 @@ function akanName(){
     
     if (gender==='male' && weekDay==='Sunday'){
         var userName = maleNameList[0]
+        response = `Your Akana name is ${userName}!!`
+        document.getElementById('display-name').innerHTML = response
         console.log(userName)
     }else if(gender==='male' && weekDay==='Monday'){
         var userName = maleNameList[1]
+        response = `Your Akana name is ${userName}!!`
+        document.getElementById('display-name').innerHTML = response
         console.log(userName)
     }else if(gender==='male' && weekDay==='Tuesday'){
         var userName = maleNameList[2]
+        response = `Your Akana name is ${userName}!!`
+        document.getElementById('display-name').innerHTML = response
         console.log(userName)
     }else if(gender==='male' && weekDay==='Wednesday'){
         var userName = maleNameList[3]
+        response = `Your Akana name is ${userName}!!`
+        document.getElementById('display-name').innerHTML = response
         console.log(userName)
     }else if(gender==='male' && weekDay==='Thursday'){
         var userName = maleNameList[4]
+        response = `Your Akana name is ${userName}!!`
+        document.getElementById('display-name').innerHTML = response
         console.log(userName)
     }else if(gender==='male' && weekDay==='Friday'){
         var userName = maleNameList[5]
+        response = `Your Akana name is ${userName}!!`
+        document.getElementById('display-name').innerHTML = response
         console.log(userName)
     }else if(gender==='male' && weekDay==='Saturday'){
         var userName = maleNameList[6]
+        response = `Your Akana name is ${userName}!!`
+        document.getElementById('display-name').innerHTML = response
         console.log(userName)
     }else if(gender==='female' && weekDay==='Sunday'){
         var userName = femaleNameList[0]
+        response = `Your Akana name is ${userName}!!`
+        document.getElementById('display-name').innerHTML = response
         console.log(userName)
     }else if(gender==='female' && weekDay==='Monday'){
         var userName = femaleNameList[1]
+        response = `Your Akana name is ${userName}!!`
+        document.getElementById('display-name').innerHTML = response
         console.log(userName)
     }else if(gender==='female' && weekDay==='Tuesday'){
         var userName = femaleNameList[2]
+        response = `Your Akana name is ${userName}!!`
+        document.getElementById('display-name').innerHTML = response
         console.log(userName)
     }else if(gender==='female' && weekDay==='Wednesday'){
         var userName = femaleNameList[3]
+        response = `Your Akana name is ${userName}!!`
+        document.getElementById('display-name').innerHTML = response
         console.log(userName)
     }else if(gender==='female' && weekDay==='Thursday'){
         var userName = femaleNameList[4]
+        response = `Your Akana name is ${userName}!!`
+        document.getElementById('display-name').innerHTML = response
         console.log(userName)
     }else if(gender==='female' && weekDay==='Friday'){
         var userName = femaleNameList[5]
+        response = `Your Akana name is ${userName}!!`
+        document.getElementById('display-name').innerHTML = response
         console.log(userName)
     }else if(gender==='female' && weekDay==='Saturday'){
         var userName = femaleNameList[6]
+        response = `Your Akana name is ${userName}!!`
+        document.getElementById('display-name').innerHTML = response
         console.log(userName)
     }else{
         var userName = alert('Data entered is invalid, please try again.')
