@@ -39,3 +39,7 @@ p{
 .btn-primary{
     width: 20vw;
 }
+
+.form-control{
+    font-weight: bold;
+}

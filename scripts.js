@@ -66,7 +66,52 @@ function akanName(){
     let weekDay = dayOfTheWeek()
 
     let maleNameList = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"]
-    let femaleNameLis = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"]
+    let femaleNameList = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"]
     
-    
+    if (gender==='male' && weekDay==='Sunday'){
+        var userName = maleNameList[0]
+        console.log(userName)
+    }else if(gender==='male' && weekDay==='Monday'){
+        var userName = maleNameList[1]
+        console.log(userName)
+    }else if(gender==='male' && weekDay==='Tuesday'){
+        var userName = maleNameList[2]
+        console.log(userName)
+    }else if(gender==='male' && weekDay==='Wednesday'){
+        var userName = maleNameList[3]
+        console.log(userName)
+    }else if(gender==='male' && weekDay==='Thursday'){
+        var userName = maleNameList[4]
+        console.log(userName)
+    }else if(gender==='male' && weekDay==='Friday'){
+        var userName = maleNameList[5]
+        console.log(userName)
+    }else if(gender==='male' && weekDay==='Saturday'){
+        var userName = maleNameList[6]
+        console.log(userName)
+    }else if(gender==='female' && weekDay==='Sunday'){
+        var userName = femaleNameList[0]
+        console.log(userName)
+    }else if(gender==='female' && weekDay==='Monday'){
+        var userName = femaleNameList[1]
+        console.log(userName)
+    }else if(gender==='female' && weekDay==='Tuesday'){
+        var userName = femaleNameList[2]
+        console.log(userName)
+    }else if(gender==='female' && weekDay==='Wednesday'){
+        var userName = femaleNameList[3]
+        console.log(userName)
+    }else if(gender==='female' && weekDay==='Thursday'){
+        var userName = femaleNameList[4]
+        console.log(userName)
+    }else if(gender==='female' && weekDay==='Friday'){
+        var userName = femaleNameList[5]
+        console.log(userName)
+    }else if(gender==='female' && weekDay==='Saturday'){
+        var userName = femaleNameList[6]
+        console.log(userName)
+    }else{
+        var userName = alert('Data entered is invalid, please try again.')
+    }
+    console.log(gender, weekDay)
 }
