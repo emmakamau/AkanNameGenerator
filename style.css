@@ -43,3 +43,11 @@ p{
 .form-control{
     font-weight: bold;
 }
+
+/* Display section name */
+
+#display-name{
+    font-family:'Dancing Script', cursive;
+    text-align: center;
+    padding: 2em;
+}
