@@ -62,9 +62,17 @@ Sunday:Akosua Monday:Adwoa Tuesday:Abenaa Wednesday:Akua Thursday:Yaa Friday:Afu
  */
 
 function akanName(){
+    //Hide form when the Akan name is displayed
+    var hideForm = document.getElementById('akan-form')
+    if (hideForm.style.display === "none") {
+        hideForm.style.display = "block";
+      } else {
+        hideForm.style.display = "none";
+      }
+
+    //Check gender and weekday to get the Akan name
     let gender = userGender()
     let weekDay = dayOfTheWeek()
-
     let maleNameList = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"]
     let femaleNameList = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"]
     
