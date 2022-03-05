@@ -40,18 +40,18 @@
                 <h3>Enter data here.</h3>
                 <div class="mb-3 form-item row">
                     <label for="day" class="col-form-label col-sm-4">Day</label>
-                    <input type="number" oninput="validateDay()" class="form-control col-sm-8" id="day" aria-describedby="day of birth" placeholder="12">
+                    <input type="number" oninput="validateDay()" maxlength="2" class="form-control col-sm-8" id="day" aria-describedby="day of birth" placeholder="12">
                     <span class="" id="day-error" class="error" role=""></span>
                 </div>
                 <div class="mb-3 form-item row">
                     <label for="month" class="col-form-label col-sm-4">Month</label>
-                    <input type="number" class="form-control col-sm-8" id="month" aria-describedby="month of birth" placeholder="4">
-                    <span class="" id="month-error" role=""></span>
+                    <input type="number" oninput="validateMonth()" maxlength="2" class="form-control col-sm-8" id="month" aria-describedby="month of birth" placeholder="4">
+                    <span class="" id="month-error" class="error" role=""></span>
                 </div>
                 <div class="mb-3 form-item row">
                     <label for="year" class="col-form-label col-sm-4">Year</label>
-                    <input type="number" class="form-control col-sm-8" id="year" aria-describedby="year of birth" placeholder="1980">
-                    <span class="" id="error" role=""></span>
+                    <input type="number" oninput="validateYear()" maxlength="4" required class="form-control col-sm-8" id="year" aria-describedby="year of birth" placeholder="1980">
+                    <span class="" id="year-error" class="error" role=""></span>
                 </div>
                 <div class="d-flex">
                     <div class="align-self-center mx-auto">

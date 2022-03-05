@@ -70,7 +70,8 @@ h3{
 
 .error{
     color: #11999E;
-    padding: 2px 8px;
+    padding: 2px;
+    margin-right: auto;
 }
 
 #display-name{
