@@ -22,35 +22,66 @@
         </div>
     </nav>
     <div class="container-fluid main-div">
-        <form class="form-inline">
-            <div class="mb-3 form-item">
-                <label for="day" class="form-label">Day</label>
-                <input type="number" class="form-control" id="day" aria-describedby="day of birth">
-            </div>
-            <div class="mb-3 form-item">
-                <label for="month" class="form-label">Month</label>
-                <input type="number" class="form-control" id="month" aria-describedby="month of birth">
-            </div>
-            <div class="mb-3 form-item">
-                <label for="day" class="form-label">Year</label>
-                <input type="number" class="form-control" id="year" aria-describedby="year of birth">
-            </div>
-            <button type="button" class="btn btn-primary" onclick="dayOfTheWeek()">Primary</button>
-        </form>
-    </div>
+        <!--Short description about the application-->
+        <div class="container intro">
+            <h2>THE AKAN NAME GENERATOR</h2>
+            <p>Akan names are derived from Ghanian culture.</p> 
+            <p>Frequently in Ghana, children are given their first name as
+                a 'day name' which corresponds to the day in the week they 
+                were born.This is also based on gender.</p>
+            <p>All we need is you date of birth, let's have some fun &#128541;</p>
+        </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="scripts.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+        <!--Ask about name and Gender-->
+        <div>
+            <form class="">
+                <div class="row mb-3 form-item">
+                    <label for="name" class="col-form-label col-sm-2 ">Name</label>
+                    <input type="text" class="form-control col-sm-6" id="day" aria-describedby="day of birth">
+                    <button type="button" class="btn btn-primary form-item">Submit</button>
+                </div>
+            </form>
+        </div>
+        <!--Day of the weekCalculator
+        <div class="container" id="akan-form">
+            <form class="form-inline">
+                <div class="mb-3 form-item">
+                    <label for="day" class="form-label">Day</label>
+                    <input type="number" class="form-control" id="day" aria-describedby="day of birth">
+                </div>
+                <div class="mb-3 form-item">
+                    <label for="month" class="form-label">Month</label>
+                    <input type="number" class="form-control" id="month" aria-describedby="month of birth">
+                </div>
+                <div class="mb-3 form-item">
+                    <label for="year" class="form-label">Year</label>
+                    <input type="number" class="form-control" id="year" aria-describedby="year of birth">
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="male" value="option1">
+                    <label class="form-check-label" for="male">Male</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="female" value="option2">
+                    <label class="form-check-label" for="female">Female</label>
+                  </div>
+                <button type="button" class="btn btn-primary" onclick="dayOfTheWeek()">Submit</button>
+            </form>
+        </div>
+    </div>-->
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="scripts.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
