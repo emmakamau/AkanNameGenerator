@@ -1,4 +1,3 @@
-
 //Function to get the day of the week from dates
 function dayOfTheWeek(){
 
@@ -150,4 +149,13 @@ function akanName(){
         var userName = alert('Data entered is invalid, please try again.')
     }
     console.log(gender, weekDay)
+}
+
+function reload(){
+    var reloadMe = document.getElementById('reload-btn');
+    if (reloadMe.style.display === "block"){
+        reloadMe.style.display = "none"
+    }else{
+        reloadMe.style.display = "block"
+    }
 }

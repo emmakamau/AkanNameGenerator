@@ -22,7 +22,7 @@
 
 <body>
     
-        <h2 class="first-header">THE AKAN NAME GENERATOR</h2>
+    <h2 class="first-header">THE AKAN NAME GENERATOR</h2>
   
     <div class="container-fluid main-div">
         <!--Short description about the application-->
@@ -34,6 +34,7 @@
             <p>All we need is your date of birth, let's have some fun &#128541;.</p>
         </div>
 
+        <!--Input form-->
         <div class="container">
             <form id="akan-form" class="akan-form" >
                 <div class="mb-3 form-item row">
@@ -48,21 +49,29 @@
                     <label for="year" class="col-form-label col-sm-4">Year</label>
                     <input type="number" class="form-control col-sm-8" id="year" aria-describedby="year of birth">
                 </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="male" value="male">
-                    <label class="form-check-label" for="male">Male</label>
+                <div class="d-flex">
+                    <div class="align-self-center mx-auto">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="male" value="male">
+                            <label class="form-check-label" for="male">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="female" value="female">
+                            <label class="form-check-label" for="female">Female</label>
+                        </div>
+                    </div><br><br>
                 </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="female" value="female">
-                    <label class="form-check-label" for="female">Female</label>
-                </div> <br><br>
-                <button type="button" class="btn btn-primary mx-auto" onclick="akanName()">Submit</button>
+                <div class="d-flex">
+                    <div class="align-self-center mx-auto">
+                        <button type="button" class="btn btn-primary" onclick="akanName()">Submit</button>
+                    </div>
+                </div>
             </form>
         </div>
 
         <!--Display akan name -->
         <div class="container display">
-            <h4 id="display-name"></h4>
+            <h1 id="display-name"></h1>
         </div>
     </div>
 
