@@ -13,13 +13,10 @@ Day of the week (d) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD 
 */
 
 function dayOfTheWeek(){
-    //var year = prompt("Year of birth:") 
-    //var MM = parseInt(prompt("Month of birth:"))
-    //var DD = parseInt(prompt("Date of birth:"))
+
     var DD = document.getElementById('day').value
     var MM = document.getElementById('month').value
     var year = document.getElementById('year').value
-    
 
     var CC = parseInt(year.substring(0,2)) //Extract 19 from 1976 i.e century digits
     var YY = parseInt(year.substring(2,4)) //Extract 76 from 1976 i.e year digits
@@ -48,3 +45,12 @@ function dayOfTheWeek(){
     console.log(day)
 }
 
+function genderMale(){
+    var male = document.getElementById('male').value
+    return male
+}
+
+function genderFemale(){
+    var female = document.getElementById('female').value
+    return female
+}
