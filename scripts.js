@@ -53,8 +53,20 @@ function userGender(){
 
 //Function to retrieve the Akan name
 
+/*
+Male Names
+Sunday:Kwasi Monday:Kwadwo Tuesday:Kwabena Wednesday:Kwaku Thursday:Yaw Friday:Kofi Saturday:Kwame
+
+Female Name
+Sunday:Akosua Monday:Adwoa Tuesday:Abenaa Wednesday:Akua Thursday:Yaa Friday:Afua Saturday:Ama
+ */
+
 function akanName(){
     let gender = userGender()
     let weekDay = dayOfTheWeek()
-    console.log(gender, weekDay)
+
+    let maleNameList = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"]
+    let femaleNameLis = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"]
+    
+    
 }
