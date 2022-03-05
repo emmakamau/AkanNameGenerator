@@ -67,11 +67,10 @@ h3{
 }
 
 /* Display section name */
-
-.error{
+.error  {
     color: #11999E;
     padding: 2px;
-    margin-right: auto;
+    text-align: left;
 }
 
 #display-name{
