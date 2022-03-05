@@ -71,6 +71,27 @@ h3{
 #display-name{
     font-family:'Dancing Script', cursive;
     text-align: center;
+    color: #11999E;
     padding:32px;
     font-size: 4em !important;
+    animation: 4s text-lineUp ease-in-out infinite;
+    animation-delay: 4s;
+}
+
+@keyframes text-lineUp {
+    0% {
+        opacity: 0;
+        transform: translateY(60%);
+    }
+    20% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
 }
