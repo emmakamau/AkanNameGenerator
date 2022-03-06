@@ -6,6 +6,7 @@ function validateDay(){
     if(isNaN(day) || day<=0 || day>31){
         dayError = "Day can only be from 1 to 31"
         document.getElementById('day-error').innerHTML = dayError
+        return dayError
     }
 };
 
@@ -23,11 +24,8 @@ function validateYear(){
     let year = document.getElementById('year').value
     let yearError
     
-    if(year.length > 4){
-        yearError = "Invalid input!"
-        document.getElementById('year-error').innerHTML = yearError
-    }else if(year === 0){
-        yearError = "Year cannot be empty"
+    if(year.length > 4 || isNaN(year)){
+        yearError = "Invalid input."
         document.getElementById('year-error').innerHTML = yearError
     }
 };
@@ -35,13 +33,16 @@ function validateYear(){
 
 //Function to get the day of the week from dates
 function dayOfTheWeek(){
+    validateDay()
+    validateMonth()
+    validateYear()
     var DD = document.getElementById('day').value
     var MM = document.getElementById('month').value - 1
     var year = document.getElementById('year').value
 
-    //console.log(DD, MM, year)
     var dateOfBirth = new Date(year, MM, DD)
     let day = dateOfBirth.getDay()
+    console.log(day)
     return day;
 }
 
@@ -49,25 +50,21 @@ function dayOfTheWeek(){
 
 function userGender(){
     let male = document.getElementById('male').checked
+    let female = document.getElementById('female').checked
+    let genderError
     if( male === true){
         var gender = "male"
         return gender;
-    }else{
+    }else if(female === true){
         var gender = "female"
         return gender;
+    }else{
+        genderError="Please select a gender"
+        document.getElementById('gender-error').innerHTML = genderError
     }
 }
 
 //Function to retrieve the Akan name
-
-/*
-Male Names
-Sunday:Kwasi Monday:Kwadwo Tuesday:Kwabena Wednesday:Kwaku Thursday:Yaw Friday:Kofi Saturday:Kwame
-
-Female Name
-Sunday:Akosua Monday:Adwoa Tuesday:Abenaa Wednesday:Akua Thursday:Yaa Friday:Afua Saturday:Ama
- */
-
 function akanName(){
     //Hide form when the Akan name is displayed
     var hideForm = document.getElementById('akan-form')
@@ -89,11 +86,14 @@ function akanName(){
         var birthDay = week[weekDay]
         response = `Your were born on a ${birthDay} and your Akan name is ${userName}!!`
         document.getElementById('display-name').innerHTML = response
-    }else{
+    }else if(gender==='female'){
         var userName = femaleNameList[weekDay]
         var birthDay = week[weekDay]
         response = `Your were born on a ${birthDay} and your Akan name is ${userName}!!`
         document.getElementById('display-name').innerHTML = response
+    }else{
+        alert("The form is missing some data!")
+        hideForm.style.display = "block";
     }
     console.log(gender, weekDay)
 }

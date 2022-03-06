@@ -73,8 +73,9 @@ h3{
 }
 
 #display-name{
-    font-family:'Dancing Script', cursive;
     text-align: center;
+    font-weight: bolder;
+    font-kerning: auto;
     color: #11999E;
     font-size: 4em !important;
 }
