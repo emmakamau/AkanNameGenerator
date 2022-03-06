@@ -32,63 +32,17 @@ function validateYear(){
     }
 };
 
-//let month = document.getElementById('month').value
-//let yr = document.getElementById('year').value
-
 
 //Function to get the day of the week from dates
 function dayOfTheWeek(){
-    validateYear()
-    validateDay()
-    validateMonth()
-    var DD = parseInt(document.getElementById('day').value)
-    var MM = parseInt(document.getElementById('month').value)
+    var DD = document.getElementById('day').value
+    var MM = document.getElementById('month').value - 1
     var year = document.getElementById('year').value
 
-    
-    var CC = parseInt(year.substring(0,2)) //Extract 19 from 1976 i.e century digits
-    var YY = parseInt(year.substring(2,4)) //Extract 76 from 1976 i.e year digits
-    
-    console.log(typeof DD, DD)
-    console.log(typeof MM, MM)
-    console.log(typeof CC, CC)
-    console.log(typeof YY, YY)
-    console.log(DD,MM,CC,YY)
-
-    var weekDay = parseInt(( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7)
-    /*var a = (CC/4) - 2*CC-1
-    var b = parseInt(a) + (5*YY/4)
-    var c = parseInt(b) + (26*(MM+1)/10)
-    var d = parseInt(c) + DD
-
-    var weekDay = d%7*/
-    console.log(weekDay)
-
-    if (weekDay === 0){
-        day = "Sunday"
-        return day;
-    }else if(weekDay === 1){
-        day = "Monday";
-        return day;
-    }else if(weekDay === 2){
-        day = "Tuesday";
-        return day;
-    }else if(weekDay === 3){
-        day = "Wednesday";
-        return day;
-    }else if(weekDay === 4){
-        day = "Thursday";
-        return day;
-    }else if(weekDay === 5){
-        day = "Friday";
-        return day;
-    }else if(weekDay === 6){
-        day = "Saturday"
-        return day;
-    }else {
-        day = "We are out of days of the week!!!"
-        return day;
-    }
+    //console.log(DD, MM, year)
+    var dateOfBirth = new Date(year, MM, DD)
+    let day = dateOfBirth.getDay()
+    return day;
 }
 
 //Function to get the gender
@@ -126,68 +80,20 @@ function akanName(){
     //Check gender and weekday to get the Akan name
     let gender = userGender()
     let weekDay = dayOfTheWeek()
+    let week = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
     let maleNameList = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"]
     let femaleNameList = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"]
-    
-    if (gender==='male' && weekDay==='Sunday'){
-        var userName = maleNameList[0]
-        response = `Your Akan name is ${userName}!! &#128512;`
-        document.getElementById('display-name').innerHTML = response
-    }else if(gender==='male' && weekDay==='Monday'){
-        var userName = maleNameList[1]
-        response = `Your Akan name is ${userName}!! &#128512;`
-        document.getElementById('display-name').innerHTML = response
-    }else if(gender==='male' && weekDay==='Tuesday'){
-        var userName = maleNameList[2]
-        response = `Your Akan name is ${userName}!! &#128512;`
-        document.getElementById('display-name').innerHTML = response
-    }else if(gender==='male' && weekDay==='Wednesday'){
-        var userName = maleNameList[3]
-        response = `Your Akan name is ${userName}!! &#128512;`
-        document.getElementById('display-name').innerHTML = response
-    }else if(gender==='male' && weekDay==='Thursday'){
-        var userName = maleNameList[4]
-        response = `Your Akan name is ${userName}!! &#128512;`
-        document.getElementById('display-name').innerHTML = response
-    }else if(gender==='male' && weekDay==='Friday'){
-        var userName = maleNameList[5] 
-        response = `Your Akan name is ${userName}!! &#128512;`
-        document.getElementById('display-name').innerHTML = response
-    }else if(gender==='male' && weekDay==='Saturday'){
-        var userName = maleNameList[6]
-        response = `Your Akan name is ${userName}!! &#128512;`
-        document.getElementById('display-name').innerHTML = response
-    }else if(gender==='female' && weekDay==='Sunday'){
-        var userName = femaleNameList[0]
-        response = `Your Akan name is ${userName}!!&#128512;`
-        document.getElementById('display-name').innerHTML = response
-    }else if(gender==='female' && weekDay==='Monday'){
-        var userName = femaleNameList[1]
-        response = `Your Akan name is ${userName}!! &#128512;`
-        document.getElementById('display-name').innerHTML = response
-    }else if(gender==='female' && weekDay==='Tuesday'){
-        var userName = femaleNameList[2]
-        response = `Your Akan name is ${userName}!! &#128512;`
-        document.getElementById('display-name').innerHTML = response
-    }else if(gender==='female' && weekDay==='Wednesday'){
-        var userName = femaleNameList[3]
-        response = `Your Akan name is ${userName}!! &#128512;`
-        document.getElementById('display-name').innerHTML = response
-    }else if(gender==='female' && weekDay==='Thursday'){
-        var userName = femaleNameList[4]
-        response = `Your Akan name is ${userName}!! &#128512;`
-        document.getElementById('display-name').innerHTML = response
-    }else if(gender==='female' && weekDay==='Friday'){
-        var userName = femaleNameList[5]
-        response = `Your Akan name is ${userName}!! &#128512;`
-        document.getElementById('display-name').innerHTML = response
-    }else if(gender==='female' && weekDay==='Saturday'){
-        var userName = femaleNameList[6]
-        response = `Your Akan name is ${userName}!! &#128512;`
+
+    if(gender==='male'){
+        var userName = maleNameList[weekDay]
+        var birthDay = week[weekDay]
+        response = `Your were born on a ${birthDay} and your Akan name is ${userName}!!`
         document.getElementById('display-name').innerHTML = response
     }else{
-        var userName = alert('Data entered is invalid, please try again.')
-        hideForm.style.display = "block";
+        var userName = femaleNameList[weekDay]
+        var birthDay = week[weekDay]
+        response = `Your were born on a ${birthDay} and your Akan name is ${userName}!!`
+        document.getElementById('display-name').innerHTML = response
     }
     console.log(gender, weekDay)
 }
