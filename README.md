@@ -24,7 +24,9 @@ JavaScript console or JS fiddle
 ## Description
 
 Enter day, month and year in the form provided, click on submit.
+
 The form is hidden for the day of birth and Akan to be displayed.
+
 Click on the reload button to start again or to clear the form fields.
 
 The form offers validation by allowing only the right date formats to be entered.

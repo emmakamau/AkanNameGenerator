@@ -76,7 +76,18 @@ h3{
     text-align: center;
     font-weight: bolder;
     font-kerning: auto;
-    color: #11999E;
     font-size: 4em !important;
+    padding: 0 32px;
+    animation-name: display;
+    animation-delay: 0;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
 }
 
+@keyframes display{
+    0%{color: #03045E;}
+    25%{color: #00B4D8; transition: cubic-bezier(0.075, 0.82, 0.165, 1);}
+    50%{color: #90E0EF;}
+    75%{color: #00B4D8;}
+    100%{color: #03045E;}
+}
